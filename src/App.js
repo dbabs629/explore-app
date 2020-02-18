@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import firebase from './components/firebase/firebase';
 import './App.css';
+
+const db = firebase.database().ref('users/dBabs/');
+const userList = db;
+// function writeUserData(fname, lname, email) {
+//   db.set({
+//     fname: fname,
+//     lname: lname,
+//     email: email
+//   });
+// }
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+{console.log(userList)}
     </div>
   );
 }
